@@ -1,0 +1,337 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vin Laurence Rapiñan — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#F7F9FC;
+      --panel:#FFFFFF;
+      --ink:#1E2A3A;
+      --muted:#647082;
+      --line:#E3E8F0;
+      --signal:#2F6FED;
+      --signal-soft:#EAF1FE;
+      --cyan:#33B7C9;
+    }
+    *{box-sizing:border-box; margin:0; padding:0;}
+    html{scroll-behavior:smooth;}
+    body{
+      background:var(--bg);
+      color:var(--ink);
+      font-family:'Inter', system-ui, sans-serif;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    h1,h2,h3,.brand{
+      font-family:'Space Grotesk', system-ui, sans-serif;
+    }
+    a{color:inherit; text-decoration:none;}
+    .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
+
+
+    header{
+      position:sticky; top:0; z-index:20;
+      background:rgba(247,249,252,0.9);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:18px 0;
+    }
+    .brand{font-weight:700; font-size:1.05rem; letter-spacing:-0.01em;}
+    .brand span{color:var(--signal);}
+    .navlinks{display:flex; gap:28px; font-size:0.92rem; font-weight:500; color:var(--muted);}
+    .navlinks a:hover{color:var(--signal);}
+
+  
+    .hero{
+      padding:88px 0 64px;
+      position:relative;
+    }
+    .eyebrow{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+      color:var(--signal);
+      background:var(--signal-soft);
+      padding:6px 14px; border-radius:100px;
+      margin-bottom:22px;
+    }
+    .dot{width:6px; height:6px; border-radius:50%; background:var(--signal); display:inline-block;}
+    .hero h1{
+      font-size:clamp(2.2rem, 5vw, 3.4rem);
+      line-height:1.08;
+      letter-spacing:-0.02em;
+      max-width:14ch;
+    }
+    .hero .role{
+      margin-top:18px;
+      font-size:1.08rem;
+      color:var(--muted);
+      max-width:52ch;
+    }
+    .hero-actions{margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;}
+    .btn{
+      padding:12px 22px; border-radius:8px; font-weight:600; font-size:0.92rem;
+      border:1px solid transparent; transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .btn-primary{background:var(--signal); color:#fff;}
+    .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(47,111,237,0.6);}
+    .btn-ghost{border-color:var(--line); color:var(--ink); background:var(--panel);}
+    .btn-ghost:hover{border-color:var(--signal); color:var(--signal);}
+
+      .hero{
+      padding:88px 0 64px;
+      position:relative;
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns:minmax(0, 1.2fr) minmax(260px, 0.8fr);
+      gap:40px;
+      align-items:center;
+    }
+    .hero-copy{
+      min-width:0;
+    }
+    .hero-visual{
+      display:flex;
+      justify-content:center;
+    }
+    .hero-visual img{
+      width:100%;
+      max-width:320px;
+      border-radius:18px;
+      object-fit:cover;
+      border:1px solid var(--line);
+      box-shadow:0 18px 45px -22px rgba(30,42,58,0.35);
+    }
+
+    @media (max-width:760px){
+      .hero-inner{
+        grid-template-columns:1fr;
+        gap:28px;
+      }
+      .hero-visual{
+        order:-1;
+      }
+      .hero-visual img{
+        max-width:260px;
+      }
+    }
+
+    @media (max-width:560px){
+      .navlinks{gap:16px; font-size:0.85rem;}
+      .hero{padding:64px 0 48px;}
+    }
+
+    .path{
+      position:relative;
+      padding-left:36px;
+    }
+    .path::before{
+      content:"";
+      position:absolute; left:8px; top:6px; bottom:6px;
+      width:2px;
+      background:repeating-linear-gradient(to bottom, var(--line) 0 6px, transparent 6px 12px);
+    }
+    .node{
+      position:absolute; left:2px; top:2px;
+      width:14px; height:14px; border-radius:50%;
+      background:var(--panel); border:2px solid var(--signal);
+    }
+    section{padding:56px 0;}
+    .section-head{margin-bottom:30px;}
+    .section-head .tag{
+      font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--cyan);
+    }
+    .section-head h2{font-size:1.7rem; margin-top:8px; letter-spacing:-0.01em;}
+
+    
+    .about p{color:var(--muted); max-width:62ch; font-size:1rem;}
+    .about p + p{margin-top:14px;}
+
+    
+    .skills-grid{
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:14px;
+    }
+    .skill-card{
+      background:var(--panel); border:1px solid var(--line); border-radius:10px;
+      padding:18px; font-size:0.92rem; font-weight:500;
+      display:flex; align-items:center; gap:10px;
+    }
+    .skill-card .sw{width:8px; height:8px; border-radius:2px; background:var(--signal); flex-shrink:0;}
+
+    /* PROJECT */
+    .project-card{
+      background:var(--panel); border:1px solid var(--line); border-radius:14px;
+      padding:30px; position:relative; overflow:hidden;
+    }
+    .project-card::after{
+      content:""; position:absolute; top:-40px; right:-40px;
+      width:140px; height:140px; border-radius:50%;
+      background:radial-gradient(circle, var(--signal-soft) 0%, transparent 70%);
+    }
+    .project-top{display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+    .project-card h3{font-size:1.3rem;}
+    .project-meta{font-size:0.85rem; color:var(--muted); margin-top:6px;}
+    .badge{
+      font-size:0.72rem; font-weight:600; padding:4px 10px; border-radius:100px;
+      background:var(--signal-soft); color:var(--signal); white-space:nowrap;
+    }
+    .project-desc{margin-top:16px; color:var(--muted); max-width:60ch; font-size:0.96rem;}
+    .stack{display:flex; gap:8px; flex-wrap:wrap; margin-top:18px;}
+    .chip{
+      font-size:0.78rem; font-weight:600; color:var(--ink);
+      border:1px solid var(--line); padding:5px 12px; border-radius:100px; background:#fbfcfe;
+    }
+
+
+    footer{
+      border-top:1px solid var(--line);
+      margin-top:40px;
+      padding:48px 0 32px;
+    }
+    .contact-box{
+      background:var(--panel); border:1px solid var(--line); border-radius:14px;
+      padding:36px; text-align:center;
+    }
+    .contact-box h2{font-size:1.5rem;}
+    .contact-box p{color:var(--muted); margin-top:10px;}
+    .contact-links{margin-top:22px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+    .contact-links a{
+      font-size:0.9rem; font-weight:600; color:var(--signal);
+      border-bottom:1px solid transparent;
+    }
+    .contact-links a:hover{border-color:var(--signal);}
+    .foot-note{text-align:center; margin-top:28px; font-size:0.8rem; color:var(--muted);}
+
+    @media (max-width:560px){
+      .navlinks{gap:16px; font-size:0.85rem;}
+      .hero{padding:64px 0 48px;}
+    }
+  </style>
+  </head>
+  <body>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">VIN<span>.</span></div>
+        <div class="navlinks">
+          <a href="#profile">Profile </a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#project">Project</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="hero" id="profile">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> BSIT Student · Open to OJT</div>
+        <h1>Vin Laurence C. Rapiñan</h1>
+        <p class="role">BS Information Technology student learning web development and networking fundamentals. Currently building basic skills in HTML, CSS, PHP, and SQL, with a growing interest in network administration.</p>
+        <div class="hero-actions">
+          <a href="#project" class="btn btn-primary">See my project</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="profile.jpg" alt="Vin Laurence Rapiñan">
+      </div>
+    </div>
+  </section>
+
+    
+
+    <div class="path">
+
+      <section id="about">
+        <div class="node"></div>
+        <div class="section-head">
+          <div class="tag">About</div>
+          <h2>Getting started in IT</h2>
+        </div>
+        <div class="about">
+          <p>I'm a BSIT student (Block B) still early in my learning journey. I'm most comfortable with the basics of web development building simple pages and working with a database and I'm currently developing that further through coursework and group projects.</p>
+          <p>I'm interested in networking and network administration as a career path, and I'm open to an OJT placement where I can learn directly from real IT work and grow my skills.</p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="node"></div>
+        <div class="section-head">
+          <div class="tag">Skills</div>
+          <h2>What I'm learning</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card"><span class="sw"></span>HTML</div>
+          <div class="skill-card"><span class="sw"></span>CSS</div>
+          <div class="skill-card"><span class="sw"></span>PHP</div>
+          <div class="skill-card"><span class="sw"></span>SQL</div>
+          <div class="skill-card"><span class="sw"></span>MS Word / PowerPoint</div>
+          <div class="skill-card"><span class="sw"></span>Basic networking concepts</div>
+        </div>
+      </section>
+
+      <section id="project">
+        <div class="node"></div>
+        <div class="section-head">
+          <div class="tag">Academic Project</div>
+          <h2>SmartStay</h2>
+        </div>
+        <div class="project-card">
+          <div class="project-top">
+            <div>
+              <h3>SmartStay</h3>
+              <div class="project-meta">Group coursework · BSIT Program</div>
+            </div>
+            <span class="badge">Course Project</span>
+          </div>
+          <p class="project-desc">
+            SmartStay is a web-based bedspace rental management system developed as a BSIT group project. It includes tenant management, room management, payment tracking, and report generation using PHP, MySQL, HTML, CSS, and JavaScript.
+          </p>
+          <div class="stack">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">PHP</span>
+            <span class="chip">SQL</span>
+            <span class="chip">JAVASCRIPT</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <section id="contact">
+  <footer>
+      
+    <div class="wrap">
+      <div class="contact-box">
+        <h2>Let's connect</h2>
+        <p>Open to OJT opportunities and always happy to talk about IT and networking.</p>
+        <div class="contact-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vinlaurence123@gmail.com" target="_blank"> vinlaurence123@gmail.com </a>
+          <a href="tel:+639615437696">+63 961 543 7696</a>
+          <a href="https://www.facebook.com/vin.laurence.9" target="blank">facebook</a>
+        </div>
+      </div>
+      <div class="foot-note">Vin Laurence C. Rapiñan · Philippines</div>
+    </div>
+  </footer>
+  </section>
+
+  </body>
+  </html>
