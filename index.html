@@ -48,11 +48,6 @@
     .navlinks{display:flex; gap:28px; font-size:0.92rem; font-weight:500; color:var(--muted);}
     .navlinks a:hover{color:var(--signal);}
 
-  
-    .hero{
-      padding:88px 0 64px;
-      position:relative;
-    }
     .eyebrow{
       display:inline-flex; align-items:center; gap:8px;
       font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
@@ -165,6 +160,7 @@
     }
     .skill-card .sw{width:8px; height:8px; border-radius:2px; background:var(--signal); flex-shrink:0;}
 
+    /* PROJECT */
     .project-card{
       background:var(--panel); border:1px solid var(--line); border-radius:14px;
       padding:30px; position:relative; overflow:hidden;
@@ -214,124 +210,230 @@
     }
   </style>
   </head>
-  <body>
 
-  <header>
-    <div class="wrap">
-      <nav>
-        <div class="brand">VIN<span>.</span></div>
-        <div class="navlinks">
-          <a href="#profile">Profile </a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#project">Project</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+<body>
 
-  <main class="wrap">
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">VIN<span>.</span></div>
+      <div class="navlinks">
+        <a href="#profile">Profile</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-    <section class="hero" id="profile">
+<main class="wrap">
+
+ 
+  <section class="hero" id="profile">
     <div class="hero-inner">
+
       <div class="hero-copy">
-        <div class="eyebrow"><span class="dot"></span> BSIT Student · Open to OJT</div>
-        <h1>Vin Laurence C. Rapiñan</h1>
-        <p class="role">BS Information Technology student learning web development and networking fundamentals. Currently building basic skills in HTML, CSS, PHP, and SQL, with a growing interest in network administration.</p>
-        <div class="hero-actions">
-          <a href="#project" class="btn btn-primary">See my project</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+
+        <div class="eyebrow">
+          <span class="dot"></span>
+          BSIT Student · Open to OJT
         </div>
+
+        <h1>Vin Laurence C. Rapiñan</h1>
+
+        <p class="role">
+          BS Information Technology student with a strong interest in networking,
+          IT support, and system administration. Experienced in developing
+          academic projects using PHP and MySQL while continuously improving my
+          technical, troubleshooting, and problem-solving skills. Currently
+          seeking an On-the-Job Training (OJT) opportunity to gain practical
+          experience in a professional IT environment.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#project" class="btn btn-primary">View Project</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+
       </div>
 
       <div class="hero-visual">
-        <img src="profile.jpg" alt="Vin Laurence Rapiñan">
+        <img src="profile.jpg" alt="Vin Laurence C. Rapiñan">
       </div>
+
     </div>
   </section>
 
-    
+  <div class="path">
 
-    <div class="path">
 
-      <section id="about">
-        <div class="node"></div>
-        <div class="section-head">
-          <div class="tag">About</div>
-          <h2>Getting started in IT</h2>
-        </div>
-        <div class="about">
-          <p>I'm a BSIT student (Block B) still early in my learning journey. I'm most comfortable with the basics of web development building simple pages and working with a database and I'm currently developing that further through coursework and group projects.</p>
-          <p>I'm interested in networking and network administration as a career path, and I'm open to an OJT placement where I can learn directly from real IT work and grow my skills.</p>
-        </div>
-      </section>
+    <section id="about">
 
-      <section id="skills">
-        <div class="node"></div>
-        <div class="section-head">
-          <div class="tag">Skills</div>
-          <h2>What I'm learning</h2>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-card"><span class="sw"></span>HTML</div>
-          <div class="skill-card"><span class="sw"></span>CSS</div>
-          <div class="skill-card"><span class="sw"></span>PHP</div>
-          <div class="skill-card"><span class="sw"></span>SQL</div>
-          <div class="skill-card"><span class="sw"></span>MS Word / PowerPoint</div>
-          <div class="skill-card"><span class="sw"></span>Basic networking concepts</div>
-        </div>
-      </section>
+      <div class="node"></div>
 
-      <section id="project">
-        <div class="node"></div>
-        <div class="section-head">
-          <div class="tag">Academic Project</div>
-          <h2>SmartStay</h2>
-        </div>
-        <div class="project-card">
-          <div class="project-top">
-            <div>
-              <h3>SmartStay</h3>
-              <div class="project-meta">Group coursework · BSIT Program</div>
+      <div class="section-head">
+        <div class="tag">About</div>
+        <h2>About Me</h2>
+      </div>
+
+      <div class="about">
+
+        <p>
+          I am a Bachelor of Science in Information Technology (BSIT) student
+          with a growing interest in networking, and IT support. Throughout my academic journey, I have gained practical
+          experience in computer systems, databases, and software development
+          through coursework and team projects.
+        </p>
+
+        <p>
+          I enjoy learning new technologies, troubleshooting technical problems,
+          and working collaboratively to find effective solutions. My goal is to
+          build a strong foundation in the IT industry by gaining real-world
+          experience through an On-the-Job Training (OJT) opportunity while
+          continuously improving my technical skills.
+        </p>
+
+      </div>
+
+    </section>
+
+ 
+    <section id="skills">
+
+      <div class="node"></div>
+
+      <div class="section-head">
+        <div class="tag">Skills</div>
+        <h2>Technical Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card"><span class="sw"></span>Networking Fundamentals</div>
+
+        <div class="skill-card"><span class="sw"></span>Hardware Installation</div>
+
+        <div class="skill-card"><span class="sw"></span>HTML5</div>
+
+        <div class="skill-card"><span class="sw"></span>CSS3</div>
+
+        <div class="skill-card"><span class="sw"></span>PHP</div>
+
+        <div class="skill-card"><span class="sw"></span>JavaScript</div>
+
+        <div class="skill-card"><span class="sw"></span>MySQL</div>
+
+
+      </div>
+
+    </section>
+
+   
+    <section id="project">
+
+      <div class="node"></div>
+
+      <div class="section-head">
+        <div class="tag">Academic Project</div>
+        <h2>SmartStay</h2>
+      </div>
+
+      <div class="project-card">
+
+        <div class="project-top">
+
+          <div>
+            <h3>SmartStay</h3>
+            <div class="project-meta">
+              Group Coursework • BS Information Technology
             </div>
-            <span class="badge">Course Project</span>
           </div>
-          <p class="project-desc">
-            SmartStay is a web-based bedspace rental management system developed as a BSIT group project. It streamlines the management of dormitory operations by providing features for tenant management, room management, payment tracking, and report generation. The system was built using PHP, MySQL, HTML, CSS, and JavaScript,
-            offering an efficient and user-friendly solution for administrators to manage daily rental operations.
-          </p>
-          <div class="stack">
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-            <span class="chip">PHP</span>
-            <span class="chip">SQL</span>
-            <span class="chip">JAVASCRIPT</span>
-          </div>
+
+          <span class="badge">Academic Project</span>
+
         </div>
-      </section>
 
-    </div>
+        <p class="project-desc">
 
-  </main>
+          SmartStay is a web-based bedspace rental management system developed
+          as a BSIT group project. The system provides administrators with an
+          organized way to manage tenants, rooms, payments, and reports through
+          a centralized platform.
 
-  <section id="contact">
-  <footer>
-      
-    <div class="wrap">
-      <div class="contact-box">
-        <h2>Let's connect</h2>
-        <p>Open to OJT opportunities and always happy to talk about IT and networking.</p>
-        <div class="contact-links">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vinlaurence123@gmail.com" target="_blank"> vinlaurence123@gmail.com </a>
-          <a href="tel:+639615437696">+63 961 543 7696</a>
-          <a href="https://www.facebook.com/vin.laurence.9" target="blank">facebook</a>
+          During the project, I gained hands-on experience working with PHP,
+          MySQL, HTML, CSS, and JavaScript while collaborating with a team to
+          design, develop, test, and improve the system. This project enhanced
+          my technical, analytical, and teamwork skills while strengthening my
+          understanding of database-driven information systems.
+
+        </p>
+
+        <div class="stack">
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3</span>
+          <span class="chip">PHP</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">MySQL</span>
         </div>
+
       </div>
-      <div class="foot-note">Vin Laurence C. Rapiñan · Philippines</div>
-    </div>
-  </footer>
-  </section>
 
-  </body>
-  </html>
+    </section>
+
+  </div>
+
+</main>
+
+
+<section id="contact">
+
+<footer>
+
+  <div class="wrap">
+
+    <div class="contact-box">
+
+      <h2>Let's Connect</h2>
+
+      <p>
+        I'm currently seeking an On-the-Job Training (OJT) opportunity in
+        Networking or IT Support. Feel free to contact
+        me regarding internship opportunities.
+      </p>
+
+      <div class="contact-links">
+
+        <a href="mailto:vinlaurence123@gmail.com">
+          vinlaurence123@gmail.com
+        </a>
+
+        <a href="tel:+639615437696">
+          +63 961 543 7696
+        </a>
+
+        <a href="https://github.com/vinlaurence" target="_blank">
+          GitHub
+        </a>
+
+        <a href="https://www.facebook.com/vin.laurence.9" target="_blank">
+          Facebook
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="foot-note">
+      © 2026 Vin Laurence C. Rapiñan • BS Information Technology Student
+    </div>
+
+  </div>
+
+</footer>
+
+</section>
+
+</body>
+</html>
