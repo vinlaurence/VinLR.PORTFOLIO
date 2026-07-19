@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
   <head>
   <meta charset="UTF-8">
@@ -8,24 +8,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#F7F9FC;
+      --bg:#F2F0F1;
       --panel:#FFFFFF;
-      --ink:#1E2A3A;
-      --muted:#647082;
-      --line:#E3E8F0;
-      --signal:#2F6FED;
-      --signal-soft:#EAF1FE;
-      --cyan:#33B7C9;
+      --ink:#4A413C;
+      --muted:#8F8478;
+      --line:#E4DED6;
+      --signal:#C98D7B;
+      --signal-soft:#F3E5DF;
+      --cyan:#88A5A1;
+      --sage:#B8C3BD;
+      --cream:#E7E2DC;
     }
     *{box-sizing:border-box; margin:0; padding:0;}
     html{scroll-behavior:smooth;}
+
     body{
-      background:var(--bg);
-      color:var(--ink);
-      font-family:'Inter', system-ui, sans-serif;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-    }
+    background:
+        radial-gradient(circle at top left, rgba(201,141,123,0.08), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(136,165,161,0.10), transparent 40%),
+        linear-gradient(135deg, #F5F3EF 0%, #F0EEE9 50%, #F2F0F1 100%);
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
     h1,h2,h3,.brand{
       font-family:'Space Grotesk', system-ui, sans-serif;
     }
@@ -40,7 +47,7 @@
 
     header{
       position:sticky; top:0; z-index:20;
-      background:rgba(247,249,252,0.9);
+      background:rgba(242,240,241,0.85);
       backdrop-filter:blur(8px);
       border-bottom:1px solid var(--line);
     }
@@ -79,8 +86,8 @@
       padding:12px 22px; border-radius:8px; font-weight:600; font-size:0.92rem;
       border:1px solid transparent; transition:transform .15s ease, box-shadow .15s ease;
     }
-    .btn-primary{background:var(--signal); color:#fff;}
-    .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(47,111,237,0.6);}
+    .btn-primary{background:var(--signal); color:#FFFFFF;}
+    .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(201,141,123,0.55);}
     .btn-ghost{border-color:var(--line); color:var(--ink); background:var(--panel);}
     .btn-ghost:hover{border-color:var(--signal); color:var(--signal);}
 
@@ -107,7 +114,7 @@
       border-radius:18px;
       object-fit:cover;
       border:1px solid var(--line);
-      box-shadow:0 18px 45px -22px rgba(30,42,58,0.35);
+      box-shadow:0 18px 45px -22px rgba(74,65,60,0.25);
     }
 
     @media (max-width:760px){
@@ -170,11 +177,6 @@
       background:var(--panel); border:1px solid var(--line); border-radius:14px;
       padding:30px; position:relative; overflow:hidden;
     }
-    .project-card::after{
-      content:""; position:absolute; top:-40px; right:-40px;
-      width:140px; height:140px; border-radius:50%;
-      background:radial-gradient(circle, var(--signal-soft) 0%, transparent 70%);
-    }
     .project-top{display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;}
     .project-card h3{font-size:1.3rem;}
     .project-meta{font-size:0.85rem; color:var(--muted); margin-top:6px;}
@@ -186,7 +188,7 @@
     .stack{display:flex; gap:8px; flex-wrap:wrap; margin-top:18px;}
     .chip{
       font-size:0.78rem; font-weight:600; color:var(--ink);
-      border:1px solid var(--line); padding:5px 12px; border-radius:100px; background:#fbfcfe;
+      border:1px solid var(--line); padding:5px 12px; border-radius:100px; background:var(--cream);
     }
 
 .works-gallery{
@@ -200,14 +202,14 @@
     overflow:hidden;
     border-radius:12px;
     border:1px solid var(--line);
-    background:#fff;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    background:var(--panel);
+    box-shadow:0 8px 20px rgba(74,65,60,.10);
     transition:.3s;
 }
 
 .work:hover{
     transform:translateY(-5px);
-    box-shadow:0 15px 30px rgba(0,0,0,.12);
+    box-shadow:0 15px 30px rgba(74,65,60,.16);
 }
 
 .work img{
@@ -289,7 +291,7 @@
         <p>
         Santa ana, Metro Manila, Philippines
         </p>
-        <a href="https://github.com/vinlaurence" target="_blank" style="color: blue;">vinlaurence.github.io/VinLR.PORTFOLIO</a>
+        <a href="https://vinlaurence.github.io/VinLR.PORTFOLIO/" target="_blank" style="color: #C98D7B;">vinlaurence.github.io/VinLR.PORTFOLIO</a>
 
         <p class="role">
           BS Information Technology student with a strong interest in networking,
@@ -523,7 +525,7 @@
             View Published Works
         </a>
     </div>
-    
+
   </div>
     
 
