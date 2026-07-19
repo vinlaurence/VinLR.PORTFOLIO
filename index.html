@@ -44,7 +44,6 @@
     margin:auto;
 }
 
-
     header{
       position:sticky; top:0; z-index:20;
       background:rgba(242,240,241,0.85);
@@ -92,7 +91,7 @@
     .btn-ghost:hover{border-color:var(--signal); color:var(--signal);}
 
       .hero{
-      padding:88px 0 64px;
+      padding:48px 0 36px;
       position:relative;
     }
     .hero-inner{
@@ -150,14 +149,18 @@
       width:14px; height:14px; border-radius:50%;
       background:var(--panel); border:2px solid var(--signal);
     }
-    section{padding:56px 0;}
-    .section-head{margin-bottom:30px;}
+    section{padding:32px 0;}
+    .section-head{margin-bottom:20px;}
     .section-head .tag{
       font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--cyan);
     }
     .section-head h2{font-size:1.7rem; margin-top:8px; letter-spacing:-0.01em;}
 
     
+    .about{
+      background:var(--panel); border:1px solid var(--line); border-radius:14px;
+      padding:30px;
+    }
     .about p{color:var(--muted); max-width:62ch; font-size:1rem;}
     .about p + p{margin-top:14px;}
 
@@ -170,9 +173,8 @@
       padding:18px; font-size:0.92rem; font-weight:500;
       display:flex; align-items:center; gap:10px;
     }
-    .skill-card .sw{width:8px; height:8px; border-radius:2px; background:var(--signal); flex-shrink:0;}
 
-    /* PROJECT */
+  
     .project-card{
       background:var(--panel); border:1px solid var(--line); border-radius:14px;
       padding:30px; position:relative; overflow:hidden;
@@ -192,10 +194,16 @@
     }
 
 .works-gallery{
-    margin-top:35px;
+    margin-top:20px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:24px;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+@media (max-width:560px){
+    .works-gallery{
+        grid-template-columns:1fr;
+    }
 }
 
 .work{
@@ -217,7 +225,8 @@
 }    
 .work img{
     width:100%;
-    height:320px;
+    aspect-ratio:1/1;
+    height:auto;
     display:block;
     object-fit:cover;
 }
@@ -226,7 +235,6 @@
 .work:hover img{
     transform:scale(1.05);
 }
-
 
     footer{
       border-top:1px solid var(--line);
@@ -318,7 +326,6 @@
 
   <div class="path">
 
-
     <section id="about">
 
       <div class="node"></div>
@@ -335,7 +342,7 @@
           with a growing interest in networking, and IT support. Throughout my academic journey, I have gained practical
           experience in computer systems, databases, and software development
           through coursework and team projects.
-        </p>
+        </p>  
 
         <p>
           I enjoy learning new technologies, troubleshooting technical problems,
@@ -348,7 +355,6 @@
       </div>
 
     </section>
-
  
     <section id="skills">
 
@@ -361,25 +367,23 @@
 
       <div class="skills-grid">
 
-        <div class="skill-card"><span></span>Networking Fundamentals</div>
+        <div class="skill-card">Networking Fundamentals</div>
 
-        <div class="skill-card"><span></span>Hardware Installation</div>
+        <div class="skill-card">Hardware Installation</div>
 
-        <div class="skill-card"><span></span>HTML5</div>
+        <div class="skill-card">HTML5</div>
 
-        <div class="skill-card"><span></span>CSS3</div>
+        <div class="skill-card">CSS3</div>
 
-        <div class="skill-card"><span></span>PHP</div>
+        <div class="skill-card">PHP</div>
 
-        <div class="skill-card"><span></span>JavaScript</div>
+        <div class="skill-card">JavaScript</div>
 
-        <div class="skill-card"><span></span>MySQL</div>
-
+        <div class="skill-card">MySQL</div>
 
       </div>
 
     </section>
-
    
     <section id="project">
 
@@ -400,8 +404,6 @@
               Group Coursework • BS Information Technology
             </div>
           </div>
-
-          <span class="badge">Academic Project</span>
 
         </div>
 
@@ -431,9 +433,7 @@
       </div>
 
     </section>
-
   
-
 <section id="experience">
 
     <div class="node"></div>
@@ -452,8 +452,6 @@
                     JRCC Multimedia Team
                 </div>
             </div>
-
-            <span class="badge">Campus Organization</span>
 
         </div>
 
@@ -474,7 +472,7 @@
             <span class="chip">Videographer</span>
         </div>
 
-        <h3 style="margin-top:35px;margin-bottom:18px;">
+        <h3 style="margin-top:20px;margin-bottom:12px;">
           Selected Design Works
         </h3>
         <div class="works-gallery">
@@ -484,39 +482,32 @@
             <img src="picture/botb.jpg" alt="Graphic Design 1"> 
             </a>
         </div>
-
         <div class="work">
             <a href="https://www.facebook.com/photo?fbid=1325715686228207&set=pcb.1325715732894869" target="_blank">
             <img src="picture/champion.png" alt="Graphic Design 2">
             </a>
         </div>
-
         <div class="work">
             <a href="https://www.facebook.com/photo?fbid=1419670686832706&set=a.504837148316069" target="_blank">
             <img src="picture/happyteacher.jpg" alt="Graphic Design 3">
             </a>
         </div>
-
         <div class="work">
             <a href="https://www.facebook.com/photo/?fbid=1641922414607531&set=pcb.1641925537940552" target="_blank">
             <img src="picture/photo edit.png" alt="Graphic Design 4">
             </a>
         </div>
-
         <div class="work">
             <a href="https://www.facebook.com/photo/?fbid=122128619757071195&set=a.122108758869071195" target="_blank">
             <img src="picture/singing.jpg" alt="Graphic Design 5">
             </a>
         </div>
-
         <div class="work">
             <a href="https://www.facebook.com/photo/?fbid=122128620891071195&set=a.122108758869071195" target="_blank">
             <img src="picture/wordfact.jpg" alt="Graphic Design 6">
             </a>
         </div>
-
 </div>
-
         <br>
 
         <a href="https://www.facebook.com/JRCCMultimediaTeam"
@@ -527,62 +518,38 @@
     </div>
 
   </div>
-    
-
 </section>
-
 </main>
-
-
-
-
 <section id="contact">
-
 <footer>
-
   <div class="wrap">
-
     <div class="contact-box">
-
-      <h2>Let's Connect</h2>
-
+      <h2>contact</h2>
       <p>
         I'm currently seeking an On-the-Job Training (OJT) opportunity in
         Networking or IT Support. Feel free to contact
         me regarding internship opportunities.
       </p>
-
       <div class="contact-links">
-
         <a href="mailto:vinlaurence123@gmail.com">
           vinlaurence123@gmail.com
         </a>
-
         <a href="tel:+639615437696">
           +63 961 543 7696
         </a>
-
         <a href="https://github.com/vinlaurence" target="_blank">
           GitHub
         </a>
-
         <a href="https://www.facebook.com/vin.laurence.9" target="_blank">
           Facebook
         </a>
-
       </div>
-
     </div>
-
     <div class="foot-note">
       © 2026 Vin Laurence C. Rapiñan • BS Information Technology Student
     </div>
-
   </div>
-
 </footer>
-
 </section>
-
 </body>
 </html>
