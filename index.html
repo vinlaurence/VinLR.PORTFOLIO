@@ -30,7 +30,12 @@
       font-family:'Space Grotesk', system-ui, sans-serif;
     }
     a{color:inherit; text-decoration:none;}
-    .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
+
+    .wrap{
+    max-width:1200px;
+    width:90%;
+    margin:auto;
+}
 
 
     header{
@@ -184,6 +189,42 @@
       border:1px solid var(--line); padding:5px 12px; border-radius:100px; background:#fbfcfe;
     }
 
+.works-gallery{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:24px;
+}
+
+.work{
+    overflow:hidden;
+    border-radius:12px;
+    border:1px solid var(--line);
+    background:#fff;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.work:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.work img{
+    transition:.35s;
+}    
+.work img{
+    width:100%;
+    height:320px;
+    display:block;
+    object-fit:cover;
+}
+
+
+.work:hover img{
+    transform:scale(1.05);
+}
+
 
     footer{
       border-top:1px solid var(--line);
@@ -222,7 +263,9 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#project">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
+    
       </div>
     </nav>
   </div>
@@ -265,8 +308,8 @@
       </div>
 
       <div class="hero-visual">
-        <img src="profile.jpg" alt="Vin Laurence C. Rapiñan">
-      </div>
+        <img src="picture/profile.jpg" alt="Vin Laurence C. Rapiñan">
+      </div>    
 
     </div>
   </section>
@@ -387,9 +430,108 @@
 
     </section>
 
+  
+
+<section id="experience">
+
+    <div class="node"></div>
+
+    <div class="section-head">
+        <div class="tag">Experience</div>
+        <h2>JRCC Multimedia</h2>
+    </div>
+
+    <div class="project-card">
+
+        <div class="project-top">
+            <div>
+                <h3>Graphic Designer & Photo Editor</h3>
+                <div class="project-meta">
+                    JRCC Multimedia Team
+                </div>
+            </div>
+
+            <span class="badge">Campus Organization</span>
+
+        </div>
+
+        <p class="project-desc">
+            Designed promotional posters, event graphics, social media
+            publications, and edited photographs for school organizations and
+            campus events. Collaborated with the multimedia team to deliver
+            creative content while meeting project deadlines.
+        </p>
+
+        <div class="stack">
+            <span class="chip">Graphic Design</span>
+            <span class="chip">Photo Editing</span>
+            <span class="chip">Adobe Photoshop</span>
+            <span class="chip">Canva</span>
+            <span class="chip">Team Collaboration</span>
+            <span class="chip">Photographer</span>
+            <span class="chip">Videographer</span>
+        </div>
+
+        <h3 style="margin-top:35px;margin-bottom:18px;">
+          Selected Design Works
+        </h3>
+        <div class="works-gallery">
+
+        <div class="work">
+            <a href="https://www.facebook.com/photo/?fbid=1286110730188703&set=a.504837148316069" target="_blank">
+            <img src="picture/botb.jpg" alt="Graphic Design 1"> 
+            </a>
+        </div>
+
+        <div class="work">
+            <a href="https://www.facebook.com/photo?fbid=1325715686228207&set=pcb.1325715732894869" target="_blank">
+            <img src="picture/champion.png" alt="Graphic Design 2">
+            </a>
+        </div>
+
+        <div class="work">
+            <a href="https://www.facebook.com/photo?fbid=1419670686832706&set=a.504837148316069" target="_blank">
+            <img src="picture/happyteacher.jpg" alt="Graphic Design 3">
+            </a>
+        </div>
+
+        <div class="work">
+            <a href="https://www.facebook.com/photo/?fbid=1641922414607531&set=pcb.1641925537940552" target="_blank">
+            <img src="picture/photo edit.png" alt="Graphic Design 4">
+            </a>
+        </div>
+
+        <div class="work">
+            <a href="https://www.facebook.com/photo/?fbid=122128619757071195&set=a.122108758869071195" target="_blank">
+            <img src="picture/singing.jpg" alt="Graphic Design 5">
+            </a>
+        </div>
+
+        <div class="work">
+            <a href="https://www.facebook.com/photo/?fbid=122128620891071195&set=a.122108758869071195" target="_blank">
+            <img src="picture/wordfact.jpg" alt="Graphic Design 6">
+            </a>
+        </div>
+
+</div>
+
+        <br>
+
+        <a href="https://www.facebook.com/JRCCMultimediaTeam"
+           class="btn btn-primary"
+           target="_blank">
+            View Published Works
+        </a>
+    </div>
+    
   </div>
+    
+
+</section>
 
 </main>
+
+
 
 
 <section id="contact">
