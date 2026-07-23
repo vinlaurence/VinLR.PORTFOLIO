@@ -1,550 +1,550 @@
-<!DOCTYPE html>
-  <html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vin Laurence Rapiñan — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#F2F0F1;
-      --panel:#FFFFFF;
-      --ink:#4A413C;
-      --muted:#8F8478;
-      --line:#E4DED6;
-      --signal:#C98D7B;
-      --signal-soft:#F3E5DF;
-      --cyan:#88A5A1;
-      --sage:#B8C3BD;
-      --cream:#E7E2DC;
-    }
-    *{box-sizing:border-box; margin:0; padding:0;}
-    html{scroll-behavior:smooth;}
+  <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vin Laurence Rapiñan — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --bg:#F2F0F1;
+        --panel:#FFFFFF;
+        --ink:#4A413C;
+        --muted:#8F8478;
+        --line:#E4DED6;
+        --signal:#C98D7B;
+        --signal-soft:#F3E5DF;
+        --cyan:#88A5A1;
+        --sage:#B8C3BD;
+        --cream:#E7E2DC;
+      }
+      *{box-sizing:border-box; margin:0; padding:0;}
+      html{scroll-behavior:smooth;}
 
-    body{
-    background:
-        radial-gradient(circle at top left, rgba(201,141,123,0.08), transparent 40%),
-        radial-gradient(circle at bottom right, rgba(136,165,161,0.10), transparent 40%),
-        linear-gradient(135deg, #F5F3EF 0%, #F0EEE9 50%, #F2F0F1 100%);
-    background-attachment: fixed;
-    color: var(--ink);
-    font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
-    h1,h2,h3,.brand{
-      font-family:'Space Grotesk', system-ui, sans-serif;
-    }
-    a{color:inherit; text-decoration:none;}
+      body{
+      background:
+          radial-gradient(circle at top left, rgba(201,141,123,0.08), transparent 40%),
+          radial-gradient(circle at bottom right, rgba(136,165,161,0.10), transparent 40%),
+          linear-gradient(135deg, #F5F3EF 0%, #F0EEE9 50%, #F2F0F1 100%);
+      background-attachment: fixed;
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+  }
+      h1,h2,h3,.brand{
+        font-family:'Space Grotesk', system-ui, sans-serif;
+      }
+      a{color:inherit; text-decoration:none;}
 
-    .wrap{
-    max-width:1200px;
-    width:90%;
-    margin:auto;
-}
+      .wrap{
+      max-width:1200px;
+      width:90%;
+      margin:auto;
+  }
 
-    header{
-      position:sticky; top:0; z-index:20;
-      background:rgba(242,240,241,0.85);
-      backdrop-filter:blur(8px);
-      border-bottom:1px solid var(--line);
-    }
-    nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:18px 0;
-    }
-    .brand{font-weight:700; font-size:1.05rem; letter-spacing:-0.01em;}
-    .brand span{color:var(--signal);}
-    .navlinks{display:flex; gap:28px; font-size:0.92rem; font-weight:500; color:var(--muted);}
-    .navlinks a:hover{color:var(--signal);}
+      header{
+        position:sticky; top:0; z-index:20;
+        background:rgba(242,240,241,0.85);
+        backdrop-filter:blur(8px);
+        border-bottom:1px solid var(--line);
+      }
+      nav{
+        display:flex; align-items:center; justify-content:space-between;
+        padding:18px 0;
+      }
+      .brand{font-weight:700; font-size:1.05rem; letter-spacing:-0.01em;}
+      .brand span{color:var(--signal);}
+      .navlinks{display:flex; gap:28px; font-size:0.92rem; font-weight:500; color:var(--muted);}
+      .navlinks a:hover{color:var(--signal);}
 
-    .eyebrow{
-      display:inline-flex; align-items:center; gap:8px;
-      font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
-      color:var(--signal);
-      background:var(--signal-soft);
-      padding:6px 14px; border-radius:100px;
-      margin-bottom:22px;
-    }
-    .dot{width:6px; height:6px; border-radius:50%; background:var(--signal); display:inline-block;}
-    .hero h1{
-      font-size:clamp(2.2rem, 5vw, 3.4rem);
-      line-height:1.08;
-      letter-spacing:-0.02em;
-      max-width:14ch;
-    }
-    .hero .role{
-      margin-top:18px;
-      font-size:1.08rem;
-      color:var(--muted);
-      max-width:52ch;
-    }
-    .hero-actions{margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;}
-    .btn{
-      padding:12px 22px; border-radius:8px; font-weight:600; font-size:0.92rem;
-      border:1px solid transparent; transition:transform .15s ease, box-shadow .15s ease;
-    }
-    .btn-primary{background:var(--signal); color:#FFFFFF;}
-    .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(201,141,123,0.55);}
-    .btn-ghost{border-color:var(--line); color:var(--ink); background:var(--panel);}
-    .btn-ghost:hover{border-color:var(--signal); color:var(--signal);}
+      .eyebrow{
+        display:inline-flex; align-items:center; gap:8px;
+        font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+        color:var(--signal);
+        background:var(--signal-soft);
+        padding:6px 14px; border-radius:100px;
+        margin-bottom:22px;
+      }
+      .dot{width:6px; height:6px; border-radius:50%; background:var(--signal); display:inline-block;}
+      .hero h1{
+        font-size:clamp(2.2rem, 5vw, 3.4rem);
+        line-height:1.08;
+        letter-spacing:-0.02em;
+        max-width:14ch;
+      }
+      .hero .role{
+        margin-top:18px;
+        font-size:1.08rem;
+        color:var(--muted);
+        max-width:52ch;
+      }
+      .hero-actions{margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;}
+      .btn{
+        padding:12px 22px; border-radius:8px; font-weight:600; font-size:0.92rem;
+        border:1px solid transparent; transition:transform .15s ease, box-shadow .15s ease;
+      }
+      .btn-primary{background:var(--signal); color:#FFFFFF;}
+      .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(201,141,123,0.55);}
+      .btn-ghost{border-color:var(--line); color:var(--ink); background:var(--panel);}
+      .btn-ghost:hover{border-color:var(--signal); color:var(--signal);}
 
-      .hero{
-      padding:48px 0 36px;
-      position:relative;
-    }
-    .hero-inner{
-      display:grid;
-      grid-template-columns:minmax(0, 1.2fr) minmax(260px, 0.8fr);
-      gap:40px;
-      align-items:center;
-    }
-    .hero-copy{
-      min-width:0;
-    }
-    .hero-visual{
-      display:flex;
-      justify-content:center;
-    }
-    .hero-visual img{
-      width:100%;
-      max-width:320px;
-      border-radius:18px;
-      object-fit:cover;
-      border:1px solid var(--line);
-      box-shadow:0 18px 45px -22px rgba(74,65,60,0.25);
-    }
-
-    @media (max-width:760px){
+        .hero{
+        padding:48px 0 36px;
+        position:relative;
+      }
       .hero-inner{
-        grid-template-columns:1fr;
-        gap:28px;
+        display:grid;
+        grid-template-columns:minmax(0, 1.2fr) minmax(260px, 0.8fr);
+        gap:40px;
+        align-items:center;
+      }
+      .hero-copy{
+        min-width:0;
       }
       .hero-visual{
-        order:-1;
+        display:flex;
+        justify-content:center;
       }
       .hero-visual img{
-        max-width:260px;
+        width:100%;
+        max-width:320px;
+        border-radius:18px;
+        object-fit:cover;
+        border:1px solid var(--line);
+        box-shadow:0 18px 45px -22px rgba(74,65,60,0.25);
       }
-    }
 
-    @media (max-width:560px){
-      .navlinks{gap:16px; font-size:0.85rem;}
-      .hero{padding:64px 0 48px;}
-    }
+      @media (max-width:760px){
+        .hero-inner{
+          grid-template-columns:1fr;
+          gap:28px;
+        }
+        .hero-visual{
+          order:-1;
+        }
+        .hero-visual img{
+          max-width:260px;
+        }
+      }
 
-    .path{
-      position:relative;
-      padding-left:36px;
-    }
-    .path::before{
-      content:"";
-      position:absolute; left:8px; top:6px; bottom:6px;
-      width:2px;
-      background:repeating-linear-gradient(to bottom, var(--line) 0 6px, transparent 6px 12px);
-    }
-    .node{
-      position:absolute; left:2px; top:2px;
-      width:14px; height:14px; border-radius:50%;
-      background:var(--panel); border:2px solid var(--signal);
-    }
-    section{padding:32px 0;}
-    .section-head{margin-bottom:20px;}
-    .section-head .tag{
-      font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--cyan);
-    }
-    .section-head h2{font-size:1.7rem; margin-top:8px; letter-spacing:-0.01em;}
+      @media (max-width:560px){
+        .navlinks{gap:16px; font-size:0.85rem;}
+        .hero{padding:64px 0 48px;}
+      }
+
+      .path{
+        position:relative;
+        padding-left:36px;
+      }
+      .path::before{
+        content:"";
+        position:absolute; left:8px; top:6px; bottom:6px;
+        width:2px;
+        background:repeating-linear-gradient(to bottom, var(--line) 0 6px, transparent 6px 12px);
+      }
+      .node{
+        position:absolute; left:2px; top:2px;
+        width:14px; height:14px; border-radius:50%;
+        background:var(--panel); border:2px solid var(--signal);
+      }
+      section{padding:32px 0;}
+      .section-head{margin-bottom:20px;}
+      .section-head .tag{
+        font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--cyan);
+      }
+      .section-head h2{font-size:1.7rem; margin-top:8px; letter-spacing:-0.01em;}
+
+      
+      .about{
+        background:var(--panel); border:1px solid var(--line); border-radius:14px;
+        padding:30px;
+      }
+      .about p{color:var(--muted); max-width:62ch; font-size:1rem;}
+      .about p + p{margin-top:14px;}
+
+      
+      .skills-grid{
+        display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:14px;
+      }
+      .skill-card{
+        background:var(--panel); border:1px solid var(--line); border-radius:10px;
+        padding:18px; font-size:0.92rem; font-weight:500;
+        display:flex; align-items:center; gap:10px;
+      }
 
     
-    .about{
-      background:var(--panel); border:1px solid var(--line); border-radius:14px;
-      padding:30px;
-    }
-    .about p{color:var(--muted); max-width:62ch; font-size:1rem;}
-    .about p + p{margin-top:14px;}
+      .project-card{
+        background:var(--panel); border:1px solid var(--line); border-radius:14px;
+        padding:30px; position:relative; overflow:hidden;
+      }
+      .project-top{display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+      .project-card h3{font-size:1.3rem;}
+      .project-meta{font-size:0.85rem; color:var(--muted); margin-top:6px;}
+      .badge{
+        font-size:0.72rem; font-weight:600; padding:4px 10px; border-radius:100px;
+        background:var(--signal-soft); color:var(--signal); white-space:nowrap;
+      }
+      .project-desc{margin-top:16px; color:var(--muted); max-width:60ch; font-size:0.96rem;}
+      .stack{display:flex; gap:8px; flex-wrap:wrap; margin-top:18px;}
+      .chip{
+        font-size:0.78rem; font-weight:600; color:var(--ink);
+        border:1px solid var(--line); padding:5px 12px; border-radius:100px; background:var(--cream);
+      }
 
-    
-    .skills-grid{
-      display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:14px;
-    }
-    .skill-card{
-      background:var(--panel); border:1px solid var(--line); border-radius:10px;
-      padding:18px; font-size:0.92rem; font-weight:500;
-      display:flex; align-items:center; gap:10px;
-    }
+  .works-gallery{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+  }
+
+  @media (max-width:560px){
+      .works-gallery{
+          grid-template-columns:1fr;
+      }
+  }
+
+  .work{
+      overflow:hidden;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      box-shadow:0 8px 20px rgba(74,65,60,.10);
+      transition:.3s;
+  }
+
+  .work:hover{
+      transform:translateY(-5px);
+      box-shadow:0 15px 30px rgba(74,65,60,.16);
+  }
+
+  .work img{
+      transition:.35s;
+  }    
+  .work img{
+      width:100%;
+      aspect-ratio:1/1;
+      height:auto;
+      display:block;
+      object-fit:cover;
+  }
+
+
+  .work:hover img{
+      transform:scale(1.05);
+  }
+
+      footer{
+        border-top:1px solid var(--line);
+        margin-top:40px;
+        padding:48px 0 32px;
+      }
+      .contact-box{
+        background:var(--panel); border:1px solid var(--line); border-radius:14px;
+        padding:36px; text-align:center;
+      }
+      .contact-box h2{font-size:1.5rem;}
+      .contact-box p{color:var(--muted); margin-top:10px;}
+      .contact-links{margin-top:22px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+      .contact-links a{
+        font-size:0.9rem; font-weight:600; color:var(--signal);
+        border-bottom:1px solid transparent;
+      }
+      .contact-links a:hover{border-color:var(--signal);}
+      .foot-note{text-align:center; margin-top:28px; font-size:0.8rem; color:var(--muted);}
+
+      @media (max-width:560px){
+        .navlinks{gap:16px; font-size:0.85rem;}
+        .hero{padding:64px 0 48px;}
+      }
+    </style>
+    </head>
+
+  <body>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">VIN<span>.</span></div>
+        <div class="navlinks">
+          <a href="#profile">Profile</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#project">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+      
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
 
   
-    .project-card{
-      background:var(--panel); border:1px solid var(--line); border-radius:14px;
-      padding:30px; position:relative; overflow:hidden;
-    }
-    .project-top{display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;}
-    .project-card h3{font-size:1.3rem;}
-    .project-meta{font-size:0.85rem; color:var(--muted); margin-top:6px;}
-    .badge{
-      font-size:0.72rem; font-weight:600; padding:4px 10px; border-radius:100px;
-      background:var(--signal-soft); color:var(--signal); white-space:nowrap;
-    }
-    .project-desc{margin-top:16px; color:var(--muted); max-width:60ch; font-size:0.96rem;}
-    .stack{display:flex; gap:8px; flex-wrap:wrap; margin-top:18px;}
-    .chip{
-      font-size:0.78rem; font-weight:600; color:var(--ink);
-      border:1px solid var(--line); padding:5px 12px; border-radius:100px; background:var(--cream);
-    }
+    <section class="hero" id="profile">
+      <div class="hero-inner">
 
-.works-gallery{
-    margin-top:20px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
-}
+        <div class="hero-copy">
 
-@media (max-width:560px){
-    .works-gallery{
-        grid-template-columns:1fr;
-    }
-}
+          <div class="eyebrow">
+            <span class="dot"></span>
+            BSIT Student · Open to OJT
+          </div>
 
-.work{
-    overflow:hidden;
-    border-radius:12px;
-    border:1px solid var(--line);
-    background:var(--panel);
-    box-shadow:0 8px 20px rgba(74,65,60,.10);
-    transition:.3s;
-}
+          <h1>Vin Laurence C. Rapiñan</h1>
 
-.work:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 30px rgba(74,65,60,.16);
-}
+          <p>
+          Santa ana, Metro Manila, Philippines
+          </p>
+          <a href="https://vinlaurence.github.io/VinLR.PORTFOLIO/" target="_blank" style="color: #C98D7B;">vinlaurence.github.io/VinLR.PORTFOLIO</a>
 
-.work img{
-    transition:.35s;
-}    
-.work img{
-    width:100%;
-    aspect-ratio:1/1;
-    height:auto;
-    display:block;
-    object-fit:cover;
-}
+          <p class="role">
+            BS Information Technology student with a strong interest in networking,
+            IT support, and system administration. Experienced in developing
+            academic projects using PHP and MySQL while continuously improving my
+            technical, troubleshooting, and problem-solving skills. Currently
+            seeking an On-the-Job Training (OJT) opportunity to gain practical
+            experience in a professional IT environment.
+          </p>
 
-
-.work:hover img{
-    transform:scale(1.05);
-}
-
-    footer{
-      border-top:1px solid var(--line);
-      margin-top:40px;
-      padding:48px 0 32px;
-    }
-    .contact-box{
-      background:var(--panel); border:1px solid var(--line); border-radius:14px;
-      padding:36px; text-align:center;
-    }
-    .contact-box h2{font-size:1.5rem;}
-    .contact-box p{color:var(--muted); margin-top:10px;}
-    .contact-links{margin-top:22px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
-    .contact-links a{
-      font-size:0.9rem; font-weight:600; color:var(--signal);
-      border-bottom:1px solid transparent;
-    }
-    .contact-links a:hover{border-color:var(--signal);}
-    .foot-note{text-align:center; margin-top:28px; font-size:0.8rem; color:var(--muted);}
-
-    @media (max-width:560px){
-      .navlinks{gap:16px; font-size:0.85rem;}
-      .hero{padding:64px 0 48px;}
-    }
-  </style>
-  </head>
-
-<body>
-
-<header>
-  <div class="wrap">
-    <nav>
-      <div class="brand">VIN<span>.</span></div>
-      <div class="navlinks">
-        <a href="#profile">Profile</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#project">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main class="wrap">
-
- 
-  <section class="hero" id="profile">
-    <div class="hero-inner">
-
-      <div class="hero-copy">
-
-        <div class="eyebrow">
-          <span class="dot"></span>
-          BSIT Student · Open to OJT
-        </div>
-
-        <h1>Vin Laurence C. Rapiñan</h1>
-
-        <p>
-        Santa ana, Metro Manila, Philippines
-        </p>
-        <a href="https://vinlaurence.github.io/VinLR.PORTFOLIO/" target="_blank" style="color: #C98D7B;">vinlaurence.github.io/VinLR.PORTFOLIO</a>
-
-        <p class="role">
-          BS Information Technology student with a strong interest in networking,
-          IT support, and system administration. Experienced in developing
-          academic projects using PHP and MySQL while continuously improving my
-          technical, troubleshooting, and problem-solving skills. Currently
-          seeking an On-the-Job Training (OJT) opportunity to gain practical
-          experience in a professional IT environment.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#project" class="btn btn-primary">View Project</a>
-          <a href="#contact" class="btn btn-ghost">Contact Me</a>
-        </div>
-
-      </div>
-
-      <div class="hero-visual">
-        <img src="picture/profile.jpg" alt="Vin Laurence C. Rapiñan">
-      </div>    
-
-    </div>
-  </section>
-
-  <div class="path">
-
-    <section id="about">
-
-      <div class="node"></div>
-
-      <div class="section-head">
-        <div class="tag">About</div>
-        <h2>About Me</h2>
-      </div>
-
-      <div class="about">
-
-        <p>
-          I am a Bachelor of Science in Information Technology (BSIT) student
-          with a growing interest in networking, and IT support. Throughout my academic journey, I have gained practical
-          experience in computer systems, databases, and software development
-          through coursework and team projects.
-        </p>  
-
-        <p>
-          I enjoy learning new technologies, troubleshooting technical problems,
-          and working collaboratively to find effective solutions. My goal is to
-          build a strong foundation in the IT industry by gaining real-world
-          experience through an On-the-Job Training (OJT) opportunity while
-          continuously improving my technical skills.
-        </p>
-
-      </div>
-
-    </section>
- 
-    <section id="skills">
-
-      <div class="node"></div>
-
-      <div class="section-head">
-        <div class="tag">Skills</div>
-        <h2>Technical Skills</h2>
-      </div>
-
-      <div class="skills-grid">
-
-        <div class="skill-card">Networking Fundamentals</div>
-
-        <div class="skill-card">Hardware Installation</div>
-
-        <div class="skill-card">HTML5</div>
-
-        <div class="skill-card">CSS3</div>
-
-
-      </div>
-
-    </section>
-   
-    <section id="project">
-
-      <div class="node"></div>
-
-      <div class="section-head">
-        <div class="tag">Academic Project</div>
-        <h2>SmartStay</h2>
-      </div>
-
-      <div class="project-card">
-
-        <div class="project-top">
-
-          <div>
-            <h3>SmartStay</h3>
-            <div class="project-meta">
-              Group Coursework • BS Information Technology
-            </div>
+          <div class="hero-actions">
+            <a href="#project" class="btn btn-primary">View Project</a>
+            <a href="#contact" class="btn btn-ghost">Contact Me</a>
           </div>
 
         </div>
 
-        <p class="project-desc">
-
-          SmartStay is a web-based bedspace rental management system developed
-          as a BSIT group project. The system provides administrators with an
-          organized way to manage tenants, rooms, payments, and reports through
-          a centralized platform.
-
-          During the project, I gained hands-on experience working with PHP,
-          MySQL, HTML, CSS, and JavaScript while collaborating with a team to
-          design, develop, test, and improve the system. This project enhanced
-          my technical, analytical, and teamwork skills while strengthening my
-          understanding of database-driven information systems.
-
-        </p>
-
-        <div class="stack">
-          <span class="chip">HTML5</span>
-          <span class="chip">CSS3</span>
-          <span class="chip">PHP</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">MySQL</span>
-        </div>
+        <div class="hero-visual">
+          <img src="picture/profile.jpg" alt="Vin Laurence C. Rapiñan">
+        </div>    
 
       </div>
-
     </section>
+
+    <div class="path">
+
+      <section id="about">
+
+        <div class="node"></div>
+
+        <div class="section-head">
+          <div class="tag">About</div>
+          <h2>About Me</h2>
+        </div>
+
+        <div class="about">
+
+          <p>
+            I am a Bachelor of Science in Information Technology (BSIT) student
+            with a growing interest in networking, and IT support. Throughout my academic journey, I have gained practical
+            experience in computer systems, databases, and software development
+            through coursework and team projects.
+          </p>  
+
+          <p>
+            I enjoy learning new technologies, troubleshooting technical problems,
+            and working collaboratively to find effective solutions. My goal is to
+            build a strong foundation in the IT industry by gaining real-world
+            experience through an On-the-Job Training (OJT) opportunity while
+            continuously improving my technical skills.
+          </p>
+
+        </div>
+
+      </section>
   
-<section id="experience">
+      <section id="skills">
 
-    <div class="node"></div>
+        <div class="node"></div>
 
-    <div class="section-head">
-        <div class="tag">Experience</div>
-        <h2>JRCC Multimedia</h2>
-    </div>
+        <div class="section-head">
+          <div class="tag">Skills</div>
+          <h2>Technical Skills</h2>
+        </div>
 
-    <div class="project-card">
+        <div class="skills-grid">
 
-        <div class="project-top">
+          <div class="skill-card">Networking Fundamentals</div>
+
+          <div class="skill-card">Hardware Installation</div>
+
+          <div class="skill-card">HTML5</div>
+
+          <div class="skill-card">CSS3</div>
+
+
+        </div>
+
+      </section>
+    
+      <section id="project">
+
+        <div class="node"></div>
+
+        <div class="section-head">
+          <div class="tag">Academic Project</div>
+          <h2>SmartStay</h2>
+        </div>
+
+        <div class="project-card">
+
+          <div class="project-top">
+
             <div>
-                <h3>Graphic Designer & Photo Editor</h3>
-                <div class="project-meta">
-                    JRCC Multimedia Team
-                </div>
+              <h3>SmartStay</h3>
+              <div class="project-meta">
+                Group Coursework • BS Information Technology
+              </div>
             </div>
 
+          </div>
+
+          <p class="project-desc">
+
+            SmartStay is a web-based bedspace rental management system developed
+            as a BSIT group project. The system provides administrators with an
+            organized way to manage tenants, rooms, payments, and reports through
+            a centralized platform.
+
+            During the project, I gained hands-on experience working with PHP,
+            MySQL, HTML, CSS, and JavaScript while collaborating with a team to
+            design, develop, test, and improve the system. This project enhanced
+            my technical, analytical, and teamwork skills while strengthening my
+            understanding of database-driven information systems.
+
+          </p>
+
+          <div class="stack">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">PHP</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">MySQL</span>
+          </div>
+
         </div>
 
-        <p class="project-desc">
-            Designed promotional posters, event graphics, social media
-            publications, and edited photographs for school organizations and
-            campus events. Collaborated with the multimedia team to deliver
-            creative content while meeting project deadlines.
-        </p>
+      </section>
+    
+  <section id="experience">
 
-        <div class="stack">
-            <span class="chip">Graphic Design</span>
-            <span class="chip">Photo Editing</span>
-            <span class="chip">Adobe Photoshop</span>
-            <span class="chip">Canva</span>
-            <span class="chip">Team Collaboration</span>
-            <span class="chip">Photographer</span>
-            <span class="chip">Videographer</span>
-        </div>
+      <div class="node"></div>
 
-        <h3 style="margin-top:20px;margin-bottom:12px;">
-          Selected Design Works
-        </h3>
-        <div class="works-gallery">
+      <div class="section-head">
+          <div class="tag">Experience</div>
+          <h2>JRCC Multimedia</h2>
+      </div>
 
-        <div class="work">
-            <a href="https://www.facebook.com/photo/?fbid=1286110730188703&set=a.504837148316069" target="_blank">
-            <img src="picture/botb.jpg" alt="Graphic Design 1"> 
-            </a>
-        </div>
-        <div class="work">
-            <a href="https://www.facebook.com/photo?fbid=1325715686228207&set=pcb.1325715732894869" target="_blank">
-            <img src="picture/champion.png" alt="Graphic Design 2">
-            </a>
-        </div>
-        <div class="work">
-            <a href="https://www.facebook.com/photo?fbid=1419670686832706&set=a.504837148316069" target="_blank">
-            <img src="picture/happyteacher.jpg" alt="Graphic Design 3">
-            </a>
-        </div>
-        <div class="work">
-            <a href="https://www.facebook.com/photo/?fbid=1641922414607531&set=pcb.1641925537940552" target="_blank">
-            <img src="picture/photo edit.png" alt="Graphic Design 4">
-            </a>
-        </div>
-        <div class="work">
-            <a href="https://www.facebook.com/photo/?fbid=122128619757071195&set=a.122108758869071195" target="_blank">
-            <img src="picture/singing.jpg" alt="Graphic Design 5">
-            </a>
-        </div>
-        <div class="work">
-            <a href="https://www.facebook.com/photo/?fbid=122128620891071195&set=a.122108758869071195" target="_blank">
-            <img src="picture/wordfact.jpg" alt="Graphic Design 6">
-            </a>
-        </div>
-</div>
-        <br>
+      <div class="project-card">
 
-        <a href="https://www.facebook.com/JRCCMultimediaTeam"
-           class="btn btn-primary"
-           target="_blank">
-            View Published Works
-        </a>
-    </div>
+          <div class="project-top">
+              <div>
+                  <h3>Graphic Designer & Photo Editor</h3>
+                  <div class="project-meta">
+                      JRCC Multimedia Team
+                  </div>
+              </div>
 
+          </div>
+
+          <p class="project-desc">
+              Designed promotional posters, event graphics, social media
+              publications, and edited photographs for school organizations and
+              campus events. Collaborated with the multimedia team to deliver
+              creative content while meeting project deadlines.
+          </p>
+
+          <div class="stack">
+              <span class="chip">Graphic Design</span>
+              <span class="chip">Photo Editing</span>
+              <span class="chip">Adobe Photoshop</span>
+              <span class="chip">Canva</span>
+              <span class="chip">Team Collaboration</span>
+              <span class="chip">Photographer</span>
+              <span class="chip">Videographer</span>
+          </div>
+
+          <h3 style="margin-top:20px;margin-bottom:12px;">
+            Selected Design Works
+          </h3>
+          <div class="works-gallery">
+
+          <div class="work">
+              <a href="https://www.facebook.com/photo/?fbid=1286110730188703&set=a.504837148316069" target="_blank">
+              <img src="picture/botb.jpg" alt="Graphic Design 1"> 
+              </a>
+          </div>
+          <div class="work">
+              <a href="https://www.facebook.com/photo?fbid=1325715686228207&set=pcb.1325715732894869" target="_blank">
+              <img src="picture/champion.png" alt="Graphic Design 2">
+              </a>
+          </div>
+          <div class="work">
+              <a href="https://www.facebook.com/photo?fbid=1419670686832706&set=a.504837148316069" target="_blank">
+              <img src="picture/happyteacher.jpg" alt="Graphic Design 3">
+              </a>
+          </div>
+          <div class="work">
+              <a href="https://www.facebook.com/photo/?fbid=1641922414607531&set=pcb.1641925537940552" target="_blank">
+              <img src="picture/photo edit.png" alt="Graphic Design 4">
+              </a>
+          </div>
+          <div class="work">
+              <a href="https://www.facebook.com/photo/?fbid=122128619757071195&set=a.122108758869071195" target="_blank">
+              <img src="picture/singing.jpg" alt="Graphic Design 5">
+              </a>
+          </div>
+          <div class="work">
+              <a href="https://www.facebook.com/photo/?fbid=122128620891071195&set=a.122108758869071195" target="_blank">
+              <img src="picture/wordfact.jpg" alt="Graphic Design 6">
+              </a>
+          </div>
   </div>
-</section>
-</main>
-<section id="contact">
-<footer>
-  <div class="wrap">
-    <div class="contact-box">
-      <h2>contact</h2>
-      <p>
-        I'm currently seeking an On-the-Job Training (OJT) opportunity in
-        Networking or IT Support. Feel free to contact
-        me regarding internship opportunities.
-      </p>
-      <div class="contact-links">
-        <a href="mailto:vinlaurence123@gmail.com">
-          vinlaurence123@gmail.com
-        </a>
-        <a href="tel:+639615437696">
-          +63 961 543 7696
-        </a>
-        <a href="https://github.com/vinlaurence" target="_blank">
-          GitHub
-        </a>
-        <a href="https://www.facebook.com/vin.laurence.9" target="_blank">
-          Facebook
-        </a>
+          <br>
+
+          <a href="https://www.facebook.com/JRCCMultimediaTeam"
+            class="btn btn-primary"
+            target="_blank">
+              View Published Works
+          </a>
+      </div>
+
+    </div>
+  </section>
+  </main>
+  <section id="contact">
+  <footer>
+    <div class="wrap">
+      <div class="contact-box">
+        <h2>contact</h2>
+        <p>
+          I'm currently seeking an On-the-Job Training (OJT) opportunity in
+          Networking or IT Support. Feel free to contact
+          me regarding internship opportunities.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:vinlaurence123@gmail.com">
+            vinlaurence123@gmail.com
+          </a>
+          <a href="tel:+639615437696">
+            +63 961 543 7696
+          </a>
+          <a href="https://github.com/vinlaurence" target="_blank">
+            GitHub
+          </a>
+          <a href="https://www.facebook.com/vin.laurence.9" target="_blank">
+            Facebook
+          </a>
+        </div>
+      </div>
+      <div class="foot-note">
+        © 2026 Vin Laurence C. Rapiñan • BS Information Technology Student
       </div>
     </div>
-    <div class="foot-note">
-      © 2026 Vin Laurence C. Rapiñan • BS Information Technology Student
-    </div>
-  </div>
-</footer>
-</section>
-</body>
-</html>
+  </footer>
+  </section>
+  </body>
+  </html>
